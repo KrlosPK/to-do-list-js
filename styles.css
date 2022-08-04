@@ -16,6 +16,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: whitesmoke;
+    flex-direction: column;
 }
 html {
     scroll-behavior: smooth;
@@ -76,27 +77,28 @@ body::-webkit-scrollbar-thumb {
     background-color: #c8d6e5;
     border: none;
     cursor: pointer;
-    transition: color 200ms ease-out, transform 200ms ease-out;
+    transition: color 200ms ease-out, transform 150ms ease-out;
 }
 .input button:hover {
     color: green;
-    transform: scale(1.325);
+    transform: scale(1.3);
 }
 .todos {
-    cursor: pointer;
     margin: 1.5rem 0;
+}
+.todo {
+    cursor: pointer;
     border-radius: 10px;
-    padding: 0.2rem 0.8rem;
+    padding: 0.2rem 1rem;
     user-select: none;
 }
-.todos:hover {
+.todo:hover {
     background-color: #b8c5d3;
 }
 
 /* Cuando el usuario marca la tarea como completada */
-.todos.checked {
+.todo.checked {
     text-decoration: line-through;
-    color: rgb(107, 107, 107);
 }
 
 /* Footer */
@@ -107,4 +109,14 @@ footer {
     bottom: 10px;
     left: 50%;
     transform: translate(-50%);
+}
+.instructions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+span {
+    color: rgb(107, 107, 107);
+    margin: 0.3rem;
 }
