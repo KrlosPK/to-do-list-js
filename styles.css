@@ -1,0 +1,94 @@
+/* --------------------------- General rules ---------------------------- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+}
+*::selection {
+	color: red;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: whitesmoke;
+}
+html {
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: #000;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: aquamarine;
+}
+/* --------------------------- End General rules ---------------------------- */
+
+/* --------------------------- Main container ---------------------------- */
+.container {
+	max-height: 700px;
+	min-height: 350px;
+	min-width: 350px;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: #c8d6e5;
+    position: relative;
+}
+.container h2 {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: 1.8em;
+	font-family: fantasy;
+	margin: 1rem 0;
+	letter-spacing: 4px;
+}
+/* Input */
+.container .input {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+.input input {
+	padding: 0.5em;
+	min-height: 2em;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: whitesmoke;
+	font-size: 1.1rem;
+	background-color: transparent;
+    margin-bottom: 1rem;
+}
+.input input:focus {
+	outline: none;
+}
+.input input:focus::placeholder {
+	visibility: hidden;
+}
+.input button {
+	align-self: center;
+	padding: 1rem;
+	background-color: #c8d6e5;
+	border: none;
+	cursor: pointer;
+	transition: color 200ms ease-out, transform 200ms ease-out;
+}
+.input button:hover {
+	color: green;
+    transform: scale(1.325);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    width: fit-content;
+    font-weight: bold;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
