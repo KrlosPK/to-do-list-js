@@ -94,11 +94,13 @@ body::-webkit-scrollbar-thumb {
 }
 .todo:hover {
     background-color: #b8c5d3;
+    font-weight: 600;
 }
 
 /* Cuando el usuario marca la tarea como completada */
 .todo.checked {
     text-decoration: line-through;
+    color: rgb(107, 107, 107);
 }
 
 /* Footer */
