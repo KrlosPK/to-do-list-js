@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="author" content="Krlos y Konan" />
-		<meta description="Lista de quehaceres hecha en JavaScript" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, user-scalable=no"
-		/>
-		<title>TO DO APP 📓 | Krlos Morales & Stiven Blandón</title>
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			rel="shortcut icon"
-			href="imgs/to-do-list.ico"
-			type="image/x-icon"
-		/>
-		<script src="app.js" defer></script>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-	</head>
-	<body>
-		<div class="container">
-			<h2>
-				TO DO LIST APP
-				<img src="imgs/to-do-list.png" alt="Lista de quehaceres" />
-			</h2>
-			<form class="input" id="form">
-				<input
-					type="text"
-					placeholder="Ingresa tu quehacer..."
-					id="userInput"
-					autocomplete="off"
-				/>
-				<button id="btnSubmit">
-					<i class="fa-solid fa-arrow-right-long"></i>
-				</button>
-			</form>
-			<div class="todos" id="todos">
-				<!-- <div class="todo">
-					<span>Trapear la casa</span
-					><i class="fa-solid fa-circle-check"></i>
-				</div>
-				<div class="todo">
-					<span>Ir por las arepas</span
-					><i class="fa-solid fa-circle-check"></i>
-				</div> -->
-			</div>
-			<footer>With 💖 by Krlos & Conan</footer>
-		</div>
-		<div class="instructions">
-			<span>Click para marcar como completado</span>
-			<span>Click derecho para eliminar quehacer</span>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Krlos y Konan" />
+        <meta description="Lista de quehaceres hecha en JavaScript" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>TO DO APP 📓 | Krlos Morales & Stiven Blandón</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="shortcut icon"
+            href="imgs/to-do-list.ico"
+            type="image/x-icon"
+        />
+        <script src="app.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h2>
+                TO DO LIST APP
+                <img src="imgs/to-do-list.png" alt="Lista de quehaceres" />
+            </h2>
+            <form class="input" id="form">
+                <input
+                    type="text"
+                    placeholder="Ingresa tu quehacer..."
+                    id="userInput"
+                    autocomplete="off"
+                />
+                <button id="btnSubmit">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </form>
+            <div class="todos" id="todos">
+                <div class="todo">
+                    <span>Ir por las arepas</span
+                    ><i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+            <footer>With 💖 by Krlos & Conan</footer>
+        </div>
+        <div class="instructions">
+            <span>Click para marcar como completado</span>
+            <span>Click derecho para eliminar quehacer</span>
+        </div>
+    </body>
 </html>
