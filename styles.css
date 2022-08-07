@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: whitesmoke;
     flex-direction: column;
 }
@@ -32,13 +32,17 @@ body::-webkit-scrollbar-thumb {
 
 /* --------------------------- Main container ---------------------------- */
 .container {
+    margin: 5rem 0 0;
     min-height: 350px;
-    min-width: 350px;
+    min-width: 30%;
     padding: 1rem;
     border-radius: 10px;
     background-color: #c8d6e5;
     position: relative;
     box-shadow: 0 0 0 4px #00000033;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .container h2 {
     display: flex;
@@ -46,7 +50,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     font-size: 1.8em;
     font-family: fantasy;
-    margin: 1rem 0;
+    margin: 1rem auto;
     letter-spacing: 4px;
 }
 /* Input */
@@ -91,16 +95,30 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     padding: 0.2rem 1rem;
     user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo i {
+    visibility: hidden;
+    transition: color 200ms ease;
 }
 .todo:hover {
     background-color: #b8c5d3;
     font-weight: 600;
 }
+.todo:hover.checked i {
+    color: green;
+}
 
 /* Cuando el usuario marca la tarea como completada */
-.todo.checked {
+.todo.checked span {
     text-decoration: line-through;
     color: rgb(107, 107, 107);
+}
+.todo.checked i {
+    visibility: visible;
+    color: rgb(15, 81, 15);
 }
 
 /* Footer */
@@ -111,6 +129,7 @@ footer {
     bottom: 10px;
     left: 50%;
     transform: translate(-50%);
+    color: red;
 }
 .instructions {
     margin-top: 1rem;

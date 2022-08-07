@@ -2,37 +2,53 @@ const formEl = document.getElementById("form");
 const userInputEl = document.getElementById("userInput");
 const btnSubmitEl = document.getElementById("btnSubmit");
 const todoList = document.getElementById("todos");
-
 // Enviar la información del usuario a la lista
 formEl.addEventListener("submit", function (e) {
-    e.preventDefault();
-    createToDo();
+	e.preventDefault();
+	createToDo();
 });
 
-function createToDo() {
-    // Añadir un nuevo elemento validando si está vacío
-    if (userInputEl.value !== "") {
-        const newToDo = document.createElement("div");
-        newToDo.classList.add("todo");
-        newToDo.textContent = userInputEl.value;
-        todoList.appendChild(newToDo);
-        userInputEl.value = "";
-    } else {
-        return 0;
-    }
+//* lo marca como completado
+function check() {
+	document.querySelectorAll(".todo").forEach((e) => {
+		e.onclick = () => {
+			e.classList.toggle("checked");
+		};
+	});
 }
+check();
 
-// Marcar como completado
-formEl.addEventListener("click", isChecked());
-function isChecked() {
-    var todoEl = document.querySelectorAll("div[class = 'todo']");
-    for (i = 0; i < todoEl.length; i++) {
-        todoEl[i].classList.toggle("checked");
-    }
+function createToDo() {
+	// Añadir un nuevo elemento validando si está vacío
+	if (userInputEl.value !== "") {
+		const newToDo = document.createElement("div");
+		const newToDoSpan = document.createElement("span");
+		const newToDoI = document.createElement("i");
+		newToDo.classList.add("todo");
+		newToDoI.classList.add("fa-solid");
+		newToDoI.classList.add("fa-circle-check");
+		newToDoSpan.textContent = userInputEl.value;
+		newToDo.appendChild(newToDoSpan);
+		newToDo.appendChild(newToDoI);
+		todoList.appendChild(newToDo);
+		userInputEl.value = "";
+		check();
+	} else {
+		return;
+	}
 }
 
 // Eliminar el quehacer de la lista
-// todoEl.addEventListener("contextmenu", function (e) {
-//     e.preventDefault();
-//     todoEl.remove();
-// });
+/* function erase() {
+    todoEl.addEventListener("contextmenu", (ev) => {
+        ev.preventDefault();
+        ev.remove();
+    });
+} */
+
+document.querySelectorAll(".todo").forEach((ev) => {
+	ev.oncontextmenu = () => {
+		ev.preventDefault();
+		ev.remove();
+	};
+});
